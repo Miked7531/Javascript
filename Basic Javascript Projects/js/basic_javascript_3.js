@@ -4,3 +4,9 @@ function maths(x,y) {
 }
 var math = maths(3,3);
 document.write(math);
+
+function myfunction() {
+    var sentence = "I am struggling";
+    sentence += " alot in javascript lol!";
+    document.getElementById("concatenate").innerHTML = sentence;
+}
