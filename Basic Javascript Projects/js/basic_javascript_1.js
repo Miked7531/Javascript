@@ -11,6 +11,7 @@ document.write(straydemon);
 document.write(5+5);
 
 function my_first_function() {
-    var Green = greentext.fontcolor("green");
-    document.getElementById("Green_Text").innerHTML = Green;
+    var greentext = "Green_Text";
+    var greentext = greentext.fontcolor("green");
+    document.getElementById("Green_Text").innerHTML = greentext;
 }
