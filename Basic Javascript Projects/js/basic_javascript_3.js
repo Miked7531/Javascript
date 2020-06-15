@@ -1,9 +1,7 @@
-function maths(x,y) {
-    var result= 3+3;
-    return result;
+function addition_Function() {
+    var addition = 2 + 2;
+    document.getElementById("math").innerHTML = " 2 + 2 = " + addition;
 }
-var math = maths(3,3);
-document.write(math);
 
 function myfunction() {
     var sentence = "I am struggling";
