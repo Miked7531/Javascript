@@ -39,7 +39,7 @@ function get_Date() {
 }
 
 function Age_Function() {
-    Age = document.getElementById("Age").nodeValue;
+    Age = document.getElementById("Age").value;
     if (Age >= 20) {
         Eat = "You are old enough to eat!";
     }
@@ -47,4 +47,19 @@ function Age_Function() {
         Eat = "You are not old enough to eat!";
     }
     document.getElementById("How_old_are_you?").innerHTML = Eat;
+}
+
+function time_function() {
+    var Time = new Date() .getHours();
+    var Reply;
+    if (Time < 12 == Time > 0) {
+        Reply = "It is morning time!";
+    }
+    else if (Time > 12 == Time < 18) {
+        Reply = "It is the afternoon.";
+    }
+    else {
+        Reply = "It is evening time.";
+    }
+    document.getElementById("time_of_day").innerHTML = Reply;
 }
