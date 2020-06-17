@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="js/basic_javascript_9.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/slideshow.css">
+    </head>
+<body>
+    <p id="timer">How many seconds would you like to set your alarm for?</p>
+    <input id="seconds" value="" />
+    <button onclick="countdown()">clicky</button>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="./images/wat1.jpg" style="width:100%">
+          <div class="text">With this overview you get an idea of how massive this place is.</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="./images/wat2.jpg" style="width:100%">
+          <div class="text">Architecture you can expect from the 7th world wonder.</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="./images/wat3.jpg" style="width:100%">
+          <div class="text">From this angle you can really tell it's been there for a while.</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+</body>
+</html>
