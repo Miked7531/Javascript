@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="js/jschallenge.js" defer></script>
+        <link href="css/jschallenge.css" type="text/css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="s1">
+            <!--bookmarks-->
+            <p><a href="#s2">Bottom of webpage.</a></p>
+            <p><a href="#s1">Jump to the top</a></p>
+            <!--/bookmarks-->
+            <script>document.body.className += ' fade-out';
+                $(function() {
+                    $('body').removeClass('fade-out');
+                });
+            </script>
+            <h1 id="h1">This text uses viewport.</h1>
+            <p></p>
+            <div id="box"></div>
+            <br>
+            <!--zoom img-->
+            <img src="images/pbj.jpg" alt="pbj time!" class="zoom" style="width:200px;height:200px;border:0rem">
+            <!--/zoom img-->
+            <br>
+            <br>
+            <!--submit form/footer-->
+            <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+                <label for="fname">Full name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Phone Number</label><br>
+                <input type="text" id="phone" name="phone" required><br><br>
+                <input type="submit" id="submit" value="Submit">
+            </form> 
+            <!--/submit form/footer-->
+        </div>
+        <div id="s2">
+            <!--slide show-->
+            <div id="slideshow">
+                <div>
+                  <img id="slide" src="https://i.pinimg.com/originals/92/f5/84/92f584b35274c9d6101d2b9eac621ccc.jpg">
+                </div>
+                <div>
+                  <img id="slide" src="https://s23209.pcdn.co/wp-content/uploads/2016/06/Guacamole-Breakfast-SandwichIMG_8756edit.jpg">
+                </div>
+                <div>
+                  Tasty looking sandwiches.
+                </div>
+            </div>
+
+            <script>
+                $("#slideshow > div:gt(0)").hide();
+
+                setInterval(function() {
+                    $('#slideshow > div:first')
+                        .fadeOut(1000)
+                        .next()
+                        .fadeIn(1000)
+                        .end()
+                        .appendTo('#slideshow');
+                }, 3000);
+            </script>
+            
+             <!--/slide show-->
+            <br>
+            <!--popup form-->
+            <button class="open-button" onclick="openForm()">Sign in</button>
+
+            <div class="form-popup" id="pop">
+            <form action="/action_page.php" id="sticky" class="form-container">
+                <h1>Login</h1>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+            </div>
+            <button class="two-button" onclick="openForm()">Contact</button>
+
+            <div class="two-popup" id="pop">
+            <form action="/action_page.php" id="sticky" class="form-container">
+                <h3>Type your information below</h3>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+            </div>
+        </div>  
+    </body>
+</html>
