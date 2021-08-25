@@ -1,0 +1,31 @@
+<p>I like Chicken</p>
+
+<div>
+    {{title}}
+</div>
+
+<div>
+    The sum of 2 and 2 is {{2+2}}
+</div>
+
+<div>
+    The double of 3 is {{duplicateNumber(3)}}
+</div>
+
+<h2>Movie Data</h2>
+
+<img 
+    *ngIf="!movies"
+    src="https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif?cid=ecf05e476pgi9m9eorvoji2n0mhmo394imaxbm0vdtp9x6nx&rid=giphy.gif&ct=g"/>
+
+<div *ngFor="let movie of movies; let index=index" class="movie-container">
+    <div>
+        {{index}}) {{movie.title | lowercase}}
+    </div>
+    <div>
+        {{movie.releaseDate | date:"dd-MMMM-yyyy" | uppercase}}
+    </div>
+    <div>
+        {{movie.price | currency}}
+    </div>
+</div>
